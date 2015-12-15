@@ -1,0 +1,211 @@
+//========== IMPORTS ==========//
+@import url(https://fonts.googleapis.com/css?family=Open+Sans)
+//========== FIN IMPORTS ==========//
+
+
+//========== VARIABLES ==========//
+$font: 'Open Sans', sans-serif
+
+$color_menu: #333333
+$color_smenu: #d00000
+
+//========== FIN VARIABLES ==========//
+
+
+//========== MIXINS ==========//
+=color_gradient($color_arriba, $color_abajo)
+	background: $color_arriba
+	background: -moz-linear-gradient(top,  $color_arriba 0%, $color_abajo 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color_arriba), color-stop(100%,$color_abajo))
+	background: -webkit-linear-gradient(top,  $color_arriba 0%,$color_abajo 100%)
+	background: -o-linear-gradient(top,  $color_arriba 0%,$color_abajo 100%)
+	background: -ms-linear-gradient(top,  $color_arriba 0%,$color_abajo 100%)
+	background: linear-gradient(to bottom,  $color_arriba 0%,$color_abajo 100%)
+
+=shadow($x, $y, $blur, $spread, $color_rbga)
+	-webkit-box-shadow: $x $y $blur $spread $color_rbga
+	-moz-box-shadow: $x $y $blur $spread $color_rbga
+	box-shadow: $x $y $blur $spread $color_rbga
+
+=border_radius($top_l, $top_r, $bottom_l, $bottom_r)
+	-webkit-border-top-left-radius: $top_l
+	-webkit-border-top-right-radius: $top_r
+	-webkit-border-bottom-left-radius: $bottom_l
+	-webkit-border-bottom-right-radius: $bottom_r
+	-moz-border-radius-topleft: $top_l
+	-moz-border-radius-topright: $top_r
+	-moz-border-radius-bottomleft: $bottom_l
+	-moz-border-radius-bottomright: $bottom_r
+	border-top-left-radius: $top_l
+	border-top-right-radius: $top_r
+	border-bottom-left-radius: $bottom_l
+	border-bottom-right-radius: $bottom_r
+
+=placeholder($font_family, $color)
+	&::-webkit-input-placeholder
+		color: $color
+		font-family: $font_family
+	&:-moz-placeholder
+		color: $color
+		font-family: $font_family
+	&::-moz-placeholder
+		color: $color
+		font-family: $font_family
+	&:-ms-input-placeholder
+		color: $color
+		font-family: $font_family
+
+=transition($property, $time)
+	-webkit-transition: $property $time ease
+	-moz-transition: $property $time ease
+	-ms-transition: $property $time ease
+	-o-transition: $property $time ease
+	transition: $property $time ease
+
+=auto-height()
+	&:before
+		content: ""
+		display: table
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+=font_family()
+	font-family: $font
+	font-weight: 400
+
+//========== FIN MIXINS ==========//
+
+
+//========== ESTILOS ==========//
+
+body
+	margin-top: 40px
+	background-color: #eeeeee
+
+.contenedor
+	width: 80%
+	float: none
+	margin: 0 auto
+	+auto-height()
+
+#rspnsv-menu
+	width: 100%
+	min-height: 52px
+	min-width: 52px
+	position: relative
+	+auto-height()
+	+border_radius(10px, 10px, 10px, 10px)
+	+color_gradient(#4f4f4f, #1f1f1f)
+	.btn_rspnsv
+		display: none
+	ul
+		list-style: none
+		float: left
+		padding: 0
+		margin: 0
+		white-space: nowrap
+		li
+			float: left
+			position: relative
+			text-align: center
+			padding: 5px 0
+			&:hover
+				+color_gradient(#e00000, #8e0000)
+			a
+				text-decoration: none
+				color: #fff
+				font-size: 15px
+				line-height: 15px
+				padding: 15px 20px
+				display: block
+			p
+				margin-top: -10px
+				text-align: left
+				margin-left: 20px
+				font-size: 13px
+				color: #fff
+				opacity: 0.7
+				font-style: italic
+			ul
+				display: none
+				top: 100%
+				z-index: 100
+				position: absolute
+				background-color: $color_smenu
+				overflow: hidden
+				+border_radius(0, 0, 5px, 5px)
+				li
+					float: none
+					border-bottom: 1px solid #a10000
+					border-top: 1px solid #ff0000
+					padding: 0
+					border-radius: 0 !important
+					&:first-child
+						border-top: 1px solid rgba(0, 0, 0, 0)
+					&:last-child
+						border-bottom: 1px solid rgba(0, 0, 0, 0)
+					a
+						text-align: left
+	ul.menu-left
+		li
+			&:first-child
+				+border_radius(10px, 0, 10px, 0)
+	ul.menu-right
+		float: right
+		li
+			&:last-child
+				+border_radius(0, 10px, 0, 10px)
+			ul
+				right: 0 !important
+				+border_radius(0, 10px, 5px, 5px)
+
+//========== FIN ESTILOS ==========//
+
+
+//========== MEDIA QUERIES ==========//
+@media only screen and (max-width: 991px)
+
+@media only screen and (max-width: 767px)
+
+@media only screen and (max-width: 680px)
+
+	#rspnsv-menu
+		float: left
+		width: auto
+		.btn_rspnsv
+			display: block
+			height: 72px
+			width: 72px
+			z-index: 110
+			position: absolute
+			top: 0
+			left: 0
+			img
+				padding: 10px
+		ul
+			display: none
+			width: 100%
+			li
+				width: 100%
+				padding-bottom: 0
+				ul
+					position: static
+					display: none
+		ul.menu-left
+			border-bottom: 1px solid #757575
+			padding-bottom: 10px
+			li
+				&:first-child
+					+border_radius(10px, 10px, 0, 0)
+		ul.menu-right
+			padding-top: 10px
+			li
+				&:last-child
+					+border_radius(0, 0, 10px, 10px)
+				ul
+					+border_radius(0, 0, 5px, 5px)
+
+@media only screen and (max-width: 480px)
+//========== FIN MEDIA QUERIES ==========//

@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  margin-top: 40px;
+  background-color: #eeeeee; }
+
+.contenedor {
+  width: 80%;
+  float: none;
+  margin: 0 auto; }
+  .contenedor:before {
+    content: "";
+    display: table; }
+  .contenedor:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+#rspnsv-menu {
+  width: 100%;
+  min-height: 52px;
+  min-width: 52px;
+  position: relative;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #4f4f4f;
+  background: -moz-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4f4f4f), color-stop(100%, #1f1f1f));
+  background: -webkit-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
+  background: -o-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
+  background: -ms-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
+  background: linear-gradient(to bottom, #4f4f4f 0%, #1f1f1f 100%); }
+  #rspnsv-menu:before {
+    content: "";
+    display: table; }
+  #rspnsv-menu:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #rspnsv-menu .btn_rspnsv {
+    display: none; }
+  #rspnsv-menu ul {
+    list-style: none;
+    float: left;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap; }
+    #rspnsv-menu ul li {
+      float: left;
+      position: relative;
+      text-align: center;
+      padding: 5px 0; }
+      #rspnsv-menu ul li:hover {
+        background: #e00000;
+        background: -moz-linear-gradient(top, #e00000 0%, #8e0000 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e00000), color-stop(100%, #8e0000));
+        background: -webkit-linear-gradient(top, #e00000 0%, #8e0000 100%);
+        background: -o-linear-gradient(top, #e00000 0%, #8e0000 100%);
+        background: -ms-linear-gradient(top, #e00000 0%, #8e0000 100%);
+        background: linear-gradient(to bottom, #e00000 0%, #8e0000 100%); }
+      #rspnsv-menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        line-height: 15px;
+        padding: 15px 20px;
+        display: block; }
+      #rspnsv-menu ul li p {
+        margin-top: -10px;
+        text-align: left;
+        margin-left: 20px;
+        font-size: 13px;
+        color: #fff;
+        opacity: 0.7;
+        font-style: italic; }
+      #rspnsv-menu ul li ul {
+        display: none;
+        top: 100%;
+        z-index: 100;
+        position: absolute;
+        background-color: #d00000;
+        overflow: hidden;
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 0;
+        -moz-border-radius-bottomleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px; }
+        #rspnsv-menu ul li ul li {
+          float: none;
+          border-bottom: 1px solid #a10000;
+          border-top: 1px solid #ff0000;
+          padding: 0;
+          border-radius: 0 !important; }
+          #rspnsv-menu ul li ul li:first-child {
+            border-top: 1px solid transparent; }
+          #rspnsv-menu ul li ul li:last-child {
+            border-bottom: 1px solid transparent; }
+          #rspnsv-menu ul li ul li a {
+            text-align: left; }
+  #rspnsv-menu ul.menu-left li:first-child {
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0; }
+  #rspnsv-menu ul.menu-right {
+    float: right; }
+    #rspnsv-menu ul.menu-right li:last-child {
+      -webkit-border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 10px;
+      -webkit-border-bottom-left-radius: 0;
+      -webkit-border-bottom-right-radius: 10px;
+      -moz-border-radius-topleft: 0;
+      -moz-border-radius-topright: 10px;
+      -moz-border-radius-bottomleft: 0;
+      -moz-border-radius-bottomright: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 10px; }
+    #rspnsv-menu ul.menu-right li ul {
+      right: 0 !important;
+      -webkit-border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 10px;
+      -webkit-border-bottom-left-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-topleft: 0;
+      -moz-border-radius-topright: 10px;
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+
+@media only screen and (max-width: 680px) {
+  #rspnsv-menu {
+    float: left;
+    width: auto; }
+    #rspnsv-menu .btn_rspnsv {
+      display: block;
+      height: 72px;
+      width: 72px;
+      z-index: 110;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      #rspnsv-menu .btn_rspnsv img {
+        padding: 10px; }
+    #rspnsv-menu ul {
+      display: none;
+      width: 100%; }
+      #rspnsv-menu ul li {
+        width: 100%;
+        padding-bottom: 0; }
+        #rspnsv-menu ul li ul {
+          position: static;
+          display: none; }
+    #rspnsv-menu ul.menu-left {
+      border-bottom: 1px solid #757575;
+      padding-bottom: 10px; }
+      #rspnsv-menu ul.menu-left li:first-child {
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-left-radius: 0;
+        -webkit-border-bottom-right-radius: 0;
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-topright: 10px;
+        -moz-border-radius-bottomleft: 0;
+        -moz-border-radius-bottomright: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; }
+    #rspnsv-menu ul.menu-right {
+      padding-top: 10px; }
+      #rspnsv-menu ul.menu-right li:last-child {
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        -webkit-border-bottom-left-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 0;
+        -moz-border-radius-bottomleft: 10px;
+        -moz-border-radius-bottomright: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+      #rspnsv-menu ul.menu-right li ul {
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 0;
+        -moz-border-radius-bottomleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px; } }
+
+/*# sourceMappingURL=estilos.css.map */
