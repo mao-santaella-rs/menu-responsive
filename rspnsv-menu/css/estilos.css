@@ -20,6 +20,7 @@ body {
   min-height: 52px;
   min-width: 52px;
   position: relative;
+  background-color: #333333;
   -webkit-border-top-left-radius: 10px;
   -webkit-border-top-right-radius: 10px;
   -webkit-border-bottom-left-radius: 10px;
@@ -31,14 +32,7 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background: #4f4f4f;
-  background: -moz-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4f4f4f), color-stop(100%, #1f1f1f));
-  background: -webkit-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
-  background: -o-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
-  background: -ms-linear-gradient(top, #4f4f4f 0%, #1f1f1f 100%);
-  background: linear-gradient(to bottom, #4f4f4f 0%, #1f1f1f 100%); }
+  border-bottom-right-radius: 10px; }
   #rspnsv-menu:before {
     content: "";
     display: table; }
@@ -62,13 +56,7 @@ body {
       text-align: center;
       padding: 5px 0; }
       #rspnsv-menu ul li:hover {
-        background: #e00000;
-        background: -moz-linear-gradient(top, #e00000 0%, #8e0000 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e00000), color-stop(100%, #8e0000));
-        background: -webkit-linear-gradient(top, #e00000 0%, #8e0000 100%);
-        background: -o-linear-gradient(top, #e00000 0%, #8e0000 100%);
-        background: -ms-linear-gradient(top, #e00000 0%, #8e0000 100%);
-        background: linear-gradient(to bottom, #e00000 0%, #8e0000 100%); }
+        background-color: #bb0000; }
       #rspnsv-menu ul li a {
         text-decoration: none;
         color: #fff;
@@ -84,11 +72,11 @@ body {
         opacity: 0.7;
         font-style: italic; }
       #rspnsv-menu ul li ul {
-        display: none;
+        margin-top: -8000px;
         top: 100%;
         z-index: 100;
         position: absolute;
-        background-color: #d00000;
+        background-color: #df0000;
         overflow: hidden;
         -webkit-border-top-left-radius: 0;
         -webkit-border-top-right-radius: 0;
@@ -104,8 +92,6 @@ body {
         border-bottom-right-radius: 5px; }
         #rspnsv-menu ul li ul li {
           float: none;
-          border-bottom: 1px solid #a10000;
-          border-top: 1px solid #ff0000;
           padding: 0;
           border-radius: 0 !important; }
           #rspnsv-menu ul li ul li:first-child {
@@ -114,17 +100,26 @@ body {
             border-bottom: 1px solid transparent; }
           #rspnsv-menu ul li ul li a {
             text-align: left; }
-        #rspnsv-menu ul li ul .box-title-menu:last-child {
-          border-top: 1px dotted #900000;
-          margin-top: 15px; }
-        #rspnsv-menu ul li ul .box-title-menu p {
-          color: #700000;
-          text-transform: uppercase;
-          opacity: 1;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: bold;
-          padding: 15px 20px; }
+        #rspnsv-menu ul li ul .box-title-menu {
+          border-bottom: 1px dotted #900000;
+          margin-bottom: 15px;
+          padding-bottom: 15px; }
+          #rspnsv-menu ul li ul .box-title-menu:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0; }
+          #rspnsv-menu ul li ul .box-title-menu p {
+            color: rgba(0, 0, 0, 0.4);
+            text-transform: uppercase;
+            opacity: 1;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: bold;
+            padding: 15px 20px;
+            margin: 0; }
+        #rspnsv-menu ul li ul .menu-horizontal {
+          float: left;
+          display: block; }
   #rspnsv-menu ul.menu-left li:first-child {
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 0;

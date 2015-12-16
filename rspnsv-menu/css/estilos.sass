@@ -6,8 +6,10 @@
 //========== VARIABLES ==========//
 $font: 'Open Sans', sans-serif
 
-$color_menu: #333333
-$color_smenu: #d00000
+$color_menu_bg: #333333
+$color_menu_hover: #d00000
+$color_smenu_bg: #df0000
+$color_smenu_hover: #bb0000
 
 //========== FIN VARIABLES ==========//
 
@@ -95,9 +97,9 @@ body
 	min-height: 52px
 	min-width: 52px
 	position: relative
+	background-color: $color_menu_bg
 	+auto-height()
 	+border_radius(10px, 10px, 10px, 10px)
-	+color_gradient(#4f4f4f, #1f1f1f)
 	.btn_rspnsv
 		display: none
 		&:hover
@@ -114,7 +116,7 @@ body
 			text-align: center
 			padding: 5px 0
 			&:hover
-				+color_gradient(#e00000, #8e0000)
+				background-color: $color_smenu_hover
 			a
 				text-decoration: none
 				color: #fff
@@ -130,17 +132,16 @@ body
 				opacity: 0.7
 				font-style: italic
 			ul
-				display: none
+				margin-top: -8000px
+				//display: none
 				top: 100%
 				z-index: 100
 				position: absolute
-				background-color: $color_smenu
+				background-color: $color_smenu_bg
 				overflow: hidden
 				+border_radius(0, 0, 5px, 5px)
 				li
 					float: none
-					border-bottom: 1px solid #a10000
-					border-top: 1px solid #ff0000
 					padding: 0
 					border-radius: 0 !important
 					&:first-child
@@ -150,17 +151,25 @@ body
 					a
 						text-align: left
 				.box-title-menu
+					border-bottom: 1px dotted #900000
+					margin-bottom: 15px
+					padding-bottom: 15px
 					&:last-child
-						border-top: 1px dotted #900000
-						margin-top: 15px
+						border-bottom: 0
+						margin-bottom: 0
+						padding-bottom: 0
 					p
-						color: #700000
+						color: rgba(0, 0, 0, 0.4)
 						text-transform: uppercase
 						opacity: 1
 						font-size: 15px
 						font-style: normal
 						font-weight: bold
 						padding: 15px 20px
+						margin: 0
+				.menu-horizontal
+					float: left
+					display: block
 
 	ul.menu-left
 		li
