@@ -64,13 +64,13 @@ body {
         line-height: 15px;
         padding: 15px 20px;
         display: block; }
-      #rspnsv-menu ul li p {
-        text-align: left;
-        margin: 5px 0 0 0;
-        font-size: 13px;
-        color: #fff;
-        opacity: 0.7;
-        font-style: italic; }
+        #rspnsv-menu ul li a p {
+          text-align: center;
+          margin: 5px 0 0 0;
+          font-size: 13px;
+          color: #fff;
+          opacity: 0.7;
+          font-style: italic; }
       #rspnsv-menu ul li ul {
         margin-top: -8000px;
         top: 100%;
@@ -99,7 +99,7 @@ body {
           #rspnsv-menu ul li ul li:last-child {
             border-bottom: 1px solid transparent; }
           #rspnsv-menu ul li ul li a {
-            text-align: left; }
+            text-align: center; }
         #rspnsv-menu ul li ul .box-title-menu {
           border-bottom: 1px dotted #900000;
           margin-bottom: 15px;
@@ -108,18 +108,28 @@ body {
             border-bottom: 0;
             margin-bottom: 0;
             padding-bottom: 0; }
+            #rspnsv-menu ul li ul .box-title-menu:last-child p {
+              padding-top: 0; }
           #rspnsv-menu ul li ul .box-title-menu p {
             color: rgba(0, 0, 0, 0.4);
             text-transform: uppercase;
             opacity: 1;
-            font-size: 15px;
+            font-size: 20px;
             font-style: normal;
-            font-weight: bold;
-            padding: 15px 20px;
+            font-weight: lighter;
+            padding: 15px 20px 0 20px;
             margin: 0; }
         #rspnsv-menu ul li ul .menu-horizontal {
           float: left;
-          display: block; }
+          display: block;
+          border: none;
+          padding: 0;
+          margin-top: 15px;
+          border-right: 1px dotted rgba(0, 0, 0, 0.4); }
+          #rspnsv-menu ul li ul .menu-horizontal p {
+            padding: 0 20px !important; }
+          #rspnsv-menu ul li ul .menu-horizontal:last-child {
+            border-right: 1px dotted transparent; }
   #rspnsv-menu ul.menu-left li:first-child {
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 0;
