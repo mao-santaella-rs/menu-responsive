@@ -82,7 +82,6 @@ $color_smenu: #d00000
 
 body
 	margin-top: 40px
-	background-color: #eeeeee
 
 .contenedor
 	width: 80%
@@ -92,16 +91,12 @@ body
 
 #rspnsv-menu
 	width: 100%
-	min-height: 52px
-	min-width: 52px
+	+color_gradient(#4f4f4f, #1f1f1f)
 	position: relative
 	+auto-height()
 	+border_radius(10px, 10px, 10px, 10px)
-	+color_gradient(#4f4f4f, #1f1f1f)
 	.btn_rspnsv
 		display: none
-		&:hover
-			cursor: pointer
 	ul
 		list-style: none
 		float: left
@@ -115,6 +110,10 @@ body
 			padding: 5px 0
 			&:hover
 				+color_gradient(#e00000, #8e0000)
+			&:hover ul
+				opacity: 1
+				top: 100%
+				+transition(opacity, .5s)
 			a
 				text-decoration: none
 				color: #fff
@@ -122,17 +121,10 @@ body
 				line-height: 15px
 				padding: 15px 20px
 				display: block
-			p
-				text-align: left
-				margin: 5px 0 0 0
-				font-size: 13px
-				color: #fff
-				opacity: 0.7
-				font-style: italic
 			ul
-				display: none
-				top: 100%
+				top: -5000px
 				z-index: 100
+				opacity: 0
 				position: absolute
 				background-color: $color_smenu
 				overflow: hidden
@@ -144,24 +136,11 @@ body
 					padding: 0
 					border-radius: 0 !important
 					&:first-child
-						border-top: 1px solid rgba(0, 0, 0, 0)
+						border-top: none
 					&:last-child
-						border-bottom: 1px solid rgba(0, 0, 0, 0)
+						border-bottom: none
 					a
 						text-align: left
-				.box-title-menu
-					&:last-child
-						border-top: 1px dotted #900000
-						margin-top: 15px
-					p
-						color: #700000
-						text-transform: uppercase
-						opacity: 1
-						font-size: 15px
-						font-style: normal
-						font-weight: bold
-						padding: 15px 20px
-
 	ul.menu-left
 		li
 			&:first-child
@@ -185,41 +164,35 @@ body
 
 @media only screen and (max-width: 680px)
 
-	#rspnsv-menu
+	#rspnsv-menu.responsive
 		float: left
-		width: auto
 		.btn_rspnsv
 			display: block
 			height: 72px
 			width: 72px
-			z-index: 110
 			position: absolute
 			top: 0
 			left: 0
+			z-index: 110
 			img
 				padding: 10px
 		ul
-			display: none
+			display: block
 			width: 100%
 			li
 				width: 100%
 				padding-bottom: 0
+				&:hover ul
+					display: block
 				ul
 					position: static
 					display: none
 		ul.menu-left
 			border-bottom: 1px solid #757575
 			padding-bottom: 10px
-			li
-				&:first-child
-					+border_radius(10px, 10px, 0, 0)
 		ul.menu-right
 			padding-top: 10px
-			li
-				&:last-child
-					+border_radius(0, 0, 10px, 10px)
-				ul
-					+border_radius(0, 0, 5px, 5px)
+
 
 @media only screen and (max-width: 480px)
 //========== FIN MEDIA QUERIES ==========//
