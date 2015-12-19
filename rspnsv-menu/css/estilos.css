@@ -100,36 +100,36 @@ body {
             border-bottom: 1px solid transparent; }
           #rspnsv-menu ul li ul li a {
             text-align: center; }
-        #rspnsv-menu ul li ul .box-title-menu {
-          border-bottom: 1px dotted #900000;
-          margin-bottom: 15px;
-          padding-bottom: 15px; }
-          #rspnsv-menu ul li ul .box-title-menu:last-child {
-            border-bottom: 0;
-            margin-bottom: 0;
-            padding-bottom: 0; }
-            #rspnsv-menu ul li ul .box-title-menu:last-child p {
-              padding-top: 0; }
-          #rspnsv-menu ul li ul .box-title-menu p {
-            color: rgba(0, 0, 0, 0.4);
-            text-transform: uppercase;
-            opacity: 1;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: lighter;
-            padding: 15px 20px 0 20px;
-            margin: 0; }
-        #rspnsv-menu ul li ul .menu-horizontal {
-          float: left;
-          display: block;
-          border: none;
-          padding: 0;
-          margin-top: 15px;
-          border-right: 1px dotted rgba(0, 0, 0, 0.4); }
-          #rspnsv-menu ul li ul .menu-horizontal p {
-            padding: 0 20px !important; }
-          #rspnsv-menu ul li ul .menu-horizontal:last-child {
-            border-right: 1px dotted transparent; }
+      #rspnsv-menu ul li .box-title-menu div {
+        border-bottom: 1px dotted #900000;
+        margin-bottom: 15px;
+        padding-bottom: 15px; }
+        #rspnsv-menu ul li .box-title-menu div:last-child {
+          border-bottom: 0;
+          margin-bottom: 0;
+          padding-bottom: 0; }
+          #rspnsv-menu ul li .box-title-menu div:last-child p {
+            padding-top: 0; }
+        #rspnsv-menu ul li .box-title-menu div p {
+          color: rgba(0, 0, 0, 0.4);
+          text-transform: uppercase;
+          opacity: 1;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: lighter;
+          padding: 15px 20px 0 20px;
+          margin: 0; }
+      #rspnsv-menu ul li .menu-horizontal div {
+        float: left;
+        display: block;
+        border: none;
+        padding: 0;
+        margin-top: 15px;
+        border-right: 1px dotted rgba(0, 0, 0, 0.4); }
+        #rspnsv-menu ul li .menu-horizontal div p {
+          padding: 0 20px !important; }
+        #rspnsv-menu ul li .menu-horizontal div:last-child {
+          border-right: 1px dotted transparent; }
   #rspnsv-menu ul.menu-left li:first-child {
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 0;
