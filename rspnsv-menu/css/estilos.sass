@@ -182,6 +182,10 @@ body
 						padding: 0 20px !important
 					&:last-child
 						border-right: 1px dotted rgba(0, 0, 0, 0)
+			.full-width
+				+border_radius(5px, 5px, 5px, 5px)
+				li
+					float: left
 
 
 	ul.menu-left
@@ -212,8 +216,6 @@ body
 		width: auto
 		.btn_rspnsv
 			display: block
-			height: 72px
-			width: 72px
 			z-index: 110
 			position: absolute
 			top: 0
@@ -229,6 +231,9 @@ body
 				ul
 					position: static
 					display: none
+		.menu-horizontal
+			div
+				width: 100%
 		ul.menu-left
 			border-bottom: 1px solid #757575
 			padding-bottom: 10px
