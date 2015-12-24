@@ -96,25 +96,58 @@ var default_position_menu = function(){
 		"display":"none",
 		"margin-top":"0"
 	});
+	console.log("default pos");
 }
 
 $(document).ready(function(){
 
+	var activate = true;
+
+	menu_horizontal_fn();
+	menu_full_width();
+	default_position_menu();
+
 	$(window).on("load resize",function(){
 
-		if (main_menu_nav.css("float") == "left" ){
+		if ($(window).width() < 680 && activate == true) {
+			console.log("estoy en un mobil");
+			main_menu_nav.find("ul, li, div").removeAttr('style');
+			default_position_menu();
+			activate = false;
+		}else if($(window).width() > 680){
+			if (activate == false) {
+				main_menu_nav.removeAttr('style');
+				main_menu_nav.find("ul, li, div").removeAttr('style');
+				menu_horizontal_fn();
+			    menu_full_width();
+				default_position_menu();
+				activate = true;
+				console.log("estoy en un pc 1");
+			}
+			console.log("estoy en un pc");
+			menu_horizontal_fn();
+		    menu_full_width();
+		}
+/*
+		if (main_menu_nav.css("float") == "left" && activate == true){
 	        console.log("estoy en un mobil");
 			main_menu_nav.find("ul, li, div").removeAttr('style');
 			default_position_menu();
+			activate = false;
 	    }else{
+			if (activate == false) {
+				default_position_menu();
+				activate = true;
+			}
 			console.log("estoy en un pc");
-			main_menu_nav.find("ul, li, div").removeAttr('style');		
+			main_menu_nav.find("ul, li, div").removeAttr('style');
 			menu_horizontal_fn();
 		    menu_full_width();
-			default_position_menu();
 		}
-
+*/
 	});
+
+
 
 	$("#rspnsv-menu > ul > li").hover(function() {
 		$(this).find("ul").stop();
