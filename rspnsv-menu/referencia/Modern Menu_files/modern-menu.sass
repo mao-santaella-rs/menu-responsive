@@ -1,0 +1,119 @@
+#menu1
+	font-family: Arial, sans-serif
+	font-size: 12px
+	background-color: #202020
+	width: 900px
+	height: 40px
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	-ms-border-radius: 5px
+	-o-border-radius: 5px
+	border-radius: 5px
+	padding: 0 20px
+	display: block
+	line-height: 1
+
+h1, ul, p, img
+	margin: 0
+	padding: 0
+	border: 0
+h1
+	font-weight: 400
+ul
+	list-style: none
+a
+	text-decoration: none
+	color: #d0d0d0
+
+.menu-label
+	font-weight: 700
+	text-transform: uppercase
+
+.menu-top
+	> li
+		float: left
+		position: relative
+		text-align: center
+		&:hover
+			background-color: #4a4a4a
+	.menu-right
+		float: right
+
+.menu-button
+	display: block
+	line-height: 40px
+	padding: 0 20px
+	color: #d0d0d0
+
+li:hover .menu-button
+	color: #fff
+
+.menu-drop
+	padding-right: 15px
+	.menu-label
+		padding-right: 20px
+		background: url(images/menu1-drop1.png) no-repeat right
+
+li:hover .menu-drop .menu-label
+	background: url(images/menu1-drop2.png) no-repeat right
+
+.menu-dropdown
+	text-align: left
+	background-color: #4a4a4a
+	-webkit-border-radius: 0 0 5px 5px
+	-moz-border-radius: 0 0 5px 5px
+	-ms-border-radius: 0 0 5px 5px
+	-o-border-radius: 0 0 5px 5px
+	border-radius: 0 0 5px 5px
+	position: absolute
+	left: -5000px
+	opacity: 0
+	z-index: 100
+
+li:hover .menu-dropdown
+	left: 0
+	opacity: 1
+
+.menu-right:hover .menu-dropdown
+	left: auto
+	right: 0
+
+.menu-sub
+	margin: 5px 0
+	li
+		white-space: nowrap
+		&:hover
+			background: #2a2a2a url(images/menu1-select.png) no-repeat 10px
+
+.menu-subbutton
+	display: block
+	padding: 7px 20px
+	line-height: 1.3
+	color: #d0d0d0
+
+.menu-sub li:hover .menu-subbutton
+	color: #fff
+
+.menu-desc
+	font-style: italic
+	color: #a0a0a0
+
+.menu-sub li:hover .menu-desc
+	color: #d0d0d0
+
+.menu-row
+	vertical-align: text-top
+	display: inline-block
+	zoom: 1
+	*display: inline
+	.menu-sub
+		margin: 0
+
+p
+	color: #e5e5e5
+
+.emp
+	font-weight: 700
+
+.quote
+	font-style: italic
